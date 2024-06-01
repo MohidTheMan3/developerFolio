@@ -44,7 +44,7 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.gitlab ? (
+      {/* {socialMediaLinks.gitlab ? (
         <a
           href={socialMediaLinks.gitlab}
           className="icon-button gitlab"
@@ -126,7 +126,7 @@ export default function socialMedia() {
           <i className="fab fa-kaggle"></i>
           <span></span>
         </a>
-      ) : null}
+      ) : null} */}
     </div>
   );
 }
