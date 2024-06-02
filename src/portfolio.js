@@ -305,7 +305,7 @@ const achievementSection = {
     {
       title: "5G Technologies Certification from Qualcomm",
       subtitle: "Certified in an overview of 5G, how it works, and how it is transforming the way the world operates.",
-      image: require("./assets/images/Qualcomm.jpg"),
+      image: require("./assets/images/Qualcomm5g.jpg"),
       imageAlt: "Certificate"
     },
     {
