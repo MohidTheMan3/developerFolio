@@ -380,6 +380,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My inbox is open for all.",
   number: "1-6316801910",
+  location: "Ronkonkoma, NY",
   email_address: "mohidrattu3@gmail.com"
 };
 
