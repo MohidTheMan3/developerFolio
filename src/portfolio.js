@@ -233,15 +233,13 @@ const achievementSection = {
   achievementsCards: [
     {
       title: "5G Technologies Certification from Qualcomm",
-      subtitle:
-        "Certified in an overview of 5G, how it works, and how it is transforming the way the world operates.",
+      subtitle:"Certified in an overview of 5G, how it works, and how it is transforming the way the world operates.",
       image: require("./assets/images/Qualcomm.jpg"),
-      imageAlt: "Certificate",
+      imageAlt: "Certificate"
     },
     {
       title: "Unqork Novice Configurator",
-      subtitle:
-        "Demonstrated proficient knowledge of basic Unqork building blocks, workflows, data structures, and APIs.",
+      subtitle: "Demonstrated proficient knowledge of basic Unqork building blocks, workflows, data structures, and APIs.",
       image: require("./assets/images/Novice-Configurator.png"),
       imageAlt: "Unqork Logo",
       footerLink: [
