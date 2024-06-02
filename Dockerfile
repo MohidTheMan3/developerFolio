@@ -1,23 +1,26 @@
-# This file is the main docker file configurations
+FROM node:16
 
-# Official Node JS runtime as a parent image
-FROM node:10.16.0-alpine
-
-# Set the working directory to ./app
+# Create app directory
 WORKDIR /app
+
+# Install git
+RUN apt-get update && apt-get install -y git
+
+# Install app dependencies
+COPY package*.json ./
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package.json ./
 
-RUN apk add --no-cache git
+# RUN apk add --no-cache git
 
 # Install any needed packages
 RUN npm install
 
 # Audit fix npm packages
-RUN npm audit fix
+RUN npm audit fix --force
 
 # Bundle app source
 COPY . /app
