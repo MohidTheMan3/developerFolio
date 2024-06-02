@@ -173,26 +173,38 @@ const workExperiences = {
     {
       role: "Lead Programmer",
       company: "First Robotics Competition",
-      image:"./assets/images/first.png",
+      companylogo: require("./assets/images/first.png"),
       date: "September 2019 – June 2023",
       location: "Ronkonkoma, NY",
-      desc: "Led the programming team in the First Robotics Competition, guiding the development of autonomous & teleoperated robot functionalities using GitHub for version control. Collaborated with team members to integrate hardware components with software solutions in Java, ensuring seamless functionality during competition matches. Contributed to strategy sessions, providing technical insights to develop winning game plans & improve team performance, earning awards in regional competitions."
+      descBullets: [
+        "Led the programming team in the First Robotics Competition, guiding the development of autonomous & teleoperated robot functionalities using GitHub for version control.",
+        "Collaborated with team members to integrate hardware components with software solutions in Java, ensuring seamless functionality during competition matches.",
+        "Contributed to strategy sessions, providing technical insights to develop winning game plans & improve team performance, earning awards in regional competitions."
+      ]
     },
     {
       role: "Web Development Intern",
       company: "Unqork",
       date: "June 2021 – August 2021",
-      image:"./assets/images/unqork.png",
+      companylogo: require("./assets/images/unqork.png"),
       location: "New York, NY",
-      desc: "Collaborated with the engineering team to gain insights into web development processes & best practices. Engaged in Quality Assurance (QA) testing of the No-Code Software, with a focus on web applications & websites. Successfully completed the Unqork Novice Developer certification, demonstrating expertise in web development."
+      descBullets: [
+        "Collaborated with the engineering team to gain insights into web development processes & best practices.", 
+        "Engaged in Quality Assurance (QA) testing of the No-Code Software, with a focus on web applications & websites.", 
+        "Successfully completed the Unqork Novice Developer certification, demonstrating expertise in web development."
+      ]
     },
     {
       role: "Computer Science Instructor",
       company: "Coding Minds Academy",
       date: "June 2022 – April 2023",
-      image:"./assets/images/codingminds.jpg",
+      companylogo:require("./assets/images/codingminds.jpg"),
       location: "Irvine, CA",
-      desc: "Conducted one-on-one teaching sessions to students nationwide, specializing in languages such as Python & Java for competition in USACO. Constantly update knowledge & skills in both teaching techniques (Replit & Leetcode) & programming languages to deliver high-quality education to students. Demonstrated a strong ability to adapt teaching style to suit individual student needs through one-on-one sessions, resulting in improved student comprehension & performance."
+      descBullets:[
+        "Conducted one-on-one teaching sessions to students nationwide, specializing in languages such as Python & Java for competition in USACO.",
+        "Constantly update knowledge & skills in both teaching techniques (Replit & Leetcode) & programming languages to deliver high-quality education to students.", 
+        "Demonstrated a strong ability to adapt teaching style to suit individual student needs through one-on-one sessions, resulting in improved student comprehension & performance."
+      ]
     }
   ]
 };
@@ -214,11 +226,13 @@ const bigProjects = {
     {
       projectName: "Resume Failed Print Script | Python",
       projectDesc: "Implemented functionality to parse G-code files & enabled users to input essential parameters. Designed algorithms to analyze the G-code file & other inputs to precisely continue printing from the point of failure. Developed an intuitive command-line interface allowing users to interact seamlessly with the script, providing clear instructions and feedback throughout the editing process.",
+      image: require("./assets/images/Python-logo-notext.svg.png"),
       date: "June 2024"
     },
     {
       projectName: "Custom Mechanical Keyboard | Fusion 360, Visual Studio, C++, 3D Printing, Soldering",
       projectDesc: "Designed & assembled a personalized mechanical keyboard using Teensy micro-controller & soldering. Employed 3D printing for casing, enhancing both functionality & customizability. Designed & programmed a customized firmware for a mechanical keyboard, utilizing C++.",
+      image: require("./assets/images/TEENSY.png"),
       date: "December 2023"
     }
   ],
@@ -285,7 +299,7 @@ const bigProjects = {
 //   display: true // Set false to hide this section, defaults to true
 // };
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Achievements And Certifications 🏆"),
   subtitle: "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done!",
   achievementsCards: [
     {
@@ -299,15 +313,15 @@ const achievementSection = {
       subtitle: "Demonstrated proficient knowledge of basic Unqork building blocks, workflows, data structures, and APIs.",
       image: require("./assets/images/Novice-Configurator.png"),
       imageAlt: "Unqork Logo",
-      footerLink: [
-        {
-          name: "View Certification",
-          url: "https://www.credly.com/badges/b94d262a-383d-46e8-9836-134609073961/linked_in_profile"
-        }
-      ]
+      // footerLink: [
+      //   {
+      //     name: "View Certification",
+      //     url: "https://www.credly.com/badges/b94d262a-383d-46e8-9836-134609073961/linked_in_profile"
+      //   }
+      // ]
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 //Blogs Section
@@ -379,7 +393,7 @@ const contactInfo = {
   title: emoji("Contact Me"),
   subtitle:
     "Discuss a project or just want to say hi? My inbox is open for all.",
-  number: "1-6316801910",
+  number: "+1-6316801910",
   location: "Ronkonkoma, NY",
   email_address: "mohidrattu3@gmail.com"
 };
