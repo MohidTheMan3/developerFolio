@@ -53,19 +53,12 @@ export default function Greeting() {
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && !isMobileDevice && (
-                  <a
-                    href={require("./resume.pdf")}
-                    download="Mohids_Resume.pdf"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
-                )}
-                {greeting.resumeLink && isMobileDevice && (
+                
+                {greeting.resumeLink /*&& isMobileDevice*/ && (
                   <a
                     //text="View Resume"
                     href= {greeting.resumeLink} 
+                    target="_blank"
                     newTab={true}
                     className="download-link-button"
                   >

@@ -81,7 +81,9 @@ function Header() {
           )}
           {viewResume && (
             <li>
-              <a href= {greeting.resumeLink}>Resume</a>
+              <a target="_blank"
+              href= {greeting.resumeLink}>
+                Resume</a>
             </li>
           )}
           <li>
