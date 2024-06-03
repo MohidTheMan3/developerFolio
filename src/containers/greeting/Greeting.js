@@ -60,6 +60,7 @@ export default function Greeting() {
                     href= {greeting.resumeLink} 
                     target="_blank"
                     newTab={true}
+                    rel="noreferrer"
                     className="download-link-button"
                   >
                     <Button text = "View Resume" />
