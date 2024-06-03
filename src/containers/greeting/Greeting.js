@@ -22,11 +22,7 @@ export default function Greeting() {
     setIsMobileDevice(isMobile());
   }, []);
 
-  const handleMobileRedirect = () => {
-    if (greeting.resumeLink) {
-      window.location.href = greeting.resumeLink;
-    }
-  };
+  
 
   if (!greeting.displayGreeting) {
     return null;
