@@ -62,7 +62,7 @@ export default function Greeting() {
                     <Button text="Download my resume" />
                   </a>
                 )}
-                {isMobileDevice && (
+                {greeting.resumeLink && isMobileDevice && (
                   <a
                     //text="View Resume"
                     href= {greeting.resumeLink} 
