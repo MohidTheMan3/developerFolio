@@ -2,14 +2,14 @@ import React from "react";
 import "./AchievementCard.scss";
 
 export default function AchievementCard({cardInfo, isDark}) {
-  // function openUrlInNewTab(url, name) {
-  //   if (!url) {
-  //     console.log(`URL for ${name} not found`);
-  //     return;
-  //   }
-  //   var win = window.open(url, "_blank");
-  //   win.focus();
-  // }
+  function openUrlInNewTab(url, name) {
+    if (!url) {
+      console.log(`URL for ${name} not found`);
+      return;
+    }
+    var win = window.open(url, "_blank");
+    win.focus();
+  }
 
   return (
     <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
@@ -29,7 +29,7 @@ export default function AchievementCard({cardInfo, isDark}) {
         </p>
       </div>
       <div className="certificate-card-footer">
-        {/* {cardInfo.footer.map((v, i) => {
+        {cardInfo.footer && cardInfo.footer.map((v, i) => {
           return (
             <span
               key={i}
@@ -41,7 +41,7 @@ export default function AchievementCard({cardInfo, isDark}) {
               {v.name}
             </span>
           );
-        })} */}
+        })}
       </div>
     </div>
   );
