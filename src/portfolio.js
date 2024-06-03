@@ -25,7 +25,7 @@ const greeting = {
   subTitle: emoji(
     "Electrical and Computer Engineering sophomore at Carnegie Mellon University with a knack for C, Java, and Python. Passionate about software development, from robotics to building everyday applications."
   ),
-  resumeLink: "https://drive.google.com/file/d/13dQKnrN4R16zsMTr6Hw92gUL7H4_CVCf/view?usp=drive_link", // Set to empty to hide the button
+  resumeLink: "https://drive.google.com/file/d/1i_idcIZqypKHBsz2MKqsx4SvwofvxO87/view?usp=drive_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
