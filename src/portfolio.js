@@ -306,19 +306,25 @@ const achievementSection = {
       title: "5G Technologies Certification from Qualcomm",
       subtitle: "Certified in an overview of 5G, how it works, and how it is transforming the way the world operates.",
       image: require("./assets/images/Qualcomm5g.jpg"),
-      imageAlt: "Certificate"
+      imageAlt: "Certificate",
+      footerLink: [
+        {
+          name: "View Certification",
+          url: "https://drive.google.com/file/d/1Dl21UqKrAy0IidwpF3jkkGJhLhwn1YWT/view?usp=sharing"
+        }
+      ]
     },
     {
       title: "Unqork Novice Configurator",
       subtitle: "Demonstrated proficient knowledge of basic Unqork building blocks, workflows, data structures, and APIs.",
       image: require("./assets/images/Novice-Configurator.png"),
       imageAlt: "Unqork Logo",
-      // footerLink: [
-      //   {
-      //     name: "View Certification",
-      //     url: "https://www.credly.com/badges/b94d262a-383d-46e8-9836-134609073961/linked_in_profile"
-      //   }
-      // ]
+      footerLink: [
+        {
+          name: "View Certification",
+          url: "https://www.credly.com/badges/b94d262a-383d-46e8-9836-134609073961/linked_in_profile"
+        }
+      ]
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -393,7 +399,6 @@ const contactInfo = {
   title: emoji("Contact Me"),
   subtitle:
     "Discuss a project or just want to say hi? My inbox is open for all.",
-  number: "+1-6316801910",
   location: "Ronkonkoma, NY",
   email_address: "mohidrattu3@gmail.com"
 };
