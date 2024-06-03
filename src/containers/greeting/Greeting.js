@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState, useEffect} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -11,9 +11,27 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+  // Function to detect mobile device
+  const isMobile = () => {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  };
+
+  useEffect(() => {
+    setIsMobileDevice(isMobile());
+  }, []);
+
+  const handleMobileRedirect = () => {
+    if (greeting.resumeLink) {
+      window.location.href = greeting.resumeLink;
+    }
+  };
+
   if (!greeting.displayGreeting) {
     return null;
   }
+
   return (
     <Fade bottom duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
@@ -39,13 +57,22 @@ export default function Greeting() {
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
+                {greeting.resumeLink && !isMobileDevice && (
                   <a
                     href={require("./resume.pdf")}
                     download="Mohids_Resume.pdf"
                     className="download-link-button"
                   >
                     <Button text="Download my resume" />
+                  </a>
+                )}
+                {isMobileDevice && (
+                  <a
+                    //text="View Resume"
+                    href= {greeting.resumeLink} 
+                    newTab={true}
+                  >
+                    <Button text = "View Resume" />
                   </a>
                 )}
               </div>
