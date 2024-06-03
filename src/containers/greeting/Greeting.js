@@ -14,13 +14,13 @@ export default function Greeting() {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   // Function to detect mobile device
-  const isMobile = () => {
-    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  };
+  // const isMobile = () => {
+  //   return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // };
 
-  useEffect(() => {
-    setIsMobileDevice(isMobile());
-  }, []);
+  // useEffect(() => {
+  //   setIsMobileDevice(isMobile());
+  // }, []);
 
   
 
