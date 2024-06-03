@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from "react";
+import React, {useContext, useState} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -11,7 +11,7 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
-  const [isMobileDevice, setIsMobileDevice] = useState(false);
+  //const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   // Function to detect mobile device
   // const isMobile = () => {
