@@ -67,6 +67,7 @@ export default function Greeting() {
                     //text="View Resume"
                     href= {greeting.resumeLink} 
                     newTab={true}
+                    className="download-link-button"
                   >
                     <Button text = "View Resume" />
                   </a>
