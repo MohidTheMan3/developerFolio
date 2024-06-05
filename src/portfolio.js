@@ -223,8 +223,8 @@ const bigProjects = {
   subtitle: "Some fun projects I did while pursuing my hobbies!",
   projects: [
     {
-      projectName: "Resume Failed Print Script | Python",
-      projectDesc: "Implemented functionality to parse G-code files & enabled users to input essential parameters. Designed algorithms to analyze the G-code file & other inputs to precisely continue printing from the point of failure. Developed an intuitive command-line interface allowing users to interact seamlessly with the script, providing clear instructions and feedback throughout the editing process.",
+      projectName: "Resume Failed 3D Print Script | Python",
+      projectDesc: "Implemented functionality to parse 3D Printer G-code files & enabled users to input essential parameters. Designed algorithms to analyze the G-code file & other inputs to precisely continue printing from the point of failure. Developed an intuitive command-line interface allowing users to interact seamlessly with the script, providing clear instructions and feedback throughout the editing process.",
       image: require("./assets/images/Python-logo-notext.svg.png"),
       date: "June 2024"
     },
