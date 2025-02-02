@@ -133,8 +133,8 @@ const educationInfo = {
       schoolName: "Carnegie Mellon University",
       logo: require("./assets/images/CMULogo.jpg"),
       subHeader: "Bachelors of Science in Electrical and Computer Engineering",
-      duration: "August 2023 - May 2027",
-      desc: "Completed Coursework: Introduction to Electrical & Computer Engineering, Principles of Imperative Computation, Concepts of Mathematics, Rapid Prototyping Technologies",
+      duration: "August 2023 - May 2026",
+      desc: "Completed Coursework: Computer Systems, Electronic Devices & Analog Circuits, Structure & Design of Digital Systems, Principles of Imperative Computation, Rapid Prototyping Technologies",
       //descBullets: [
       //  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       //  "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -169,6 +169,18 @@ const techStack = {
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
+    {
+      role: "Electrical and Computer Engineering Teaching Assistant",
+      company: "Carnegie Mellon University",
+      companylogo: require("./assets/images/CMULogo.jpg"),
+      date: "January 2025 – Present",
+      location: "Pittsburgh, PA",
+      descBullets: [
+        "Guided students in implementing machine learning models for image detection & recognition of symbols, & deploying them on microcontrollers for real-world applications",
+        "Taught I2C communication protocols, sensor integration, & Arduino programming, enabling students to interface microcontrollers with external devices such as sensors & displays",
+        "Facilitated the Analog-to-Digital Converter Lab, helping students design, simulate, & build circuits to understand practical applications in embedded systems"
+      ]
+    },
     {
       role: "Lead Programmer",
       company: "First Robotics Competition",
@@ -222,6 +234,12 @@ const bigProjects = {
   title: "Projects",
   subtitle: "Some fun projects I did while pursuing my hobbies!",
   projects: [
+    {
+      projectName: "Autonomous Plastic Waste Collector | Python, OpenCV, C++, Solidworks, Machine Learning",
+      projectDesc: "Developed a robot with 95% accuracy in detecting plastic water bottles using Python, OpenCV, & a custom-trained machine learning model on a curated dataset. Implemented seamless communication between a Raspberry Pi for real-time vision processing & an Arduino for motor control, achieving reliable multi-device coordination. Designed & fabricated custom 3D-printed mounts & a laser-cut base plate, integrating a camera, DC motors, & battery-powered functionality for autonomous mobility.",
+      image: require("./assets/images/robot.png"),
+      date: "January 2025"
+    },
     {
       projectName: "Resume Failed 3D Print Script | Python",
       projectDesc: "Implemented functionality to parse 3D Printer G-code files & enabled users to input essential parameters. Designed algorithms to analyze the G-code file & other inputs to precisely continue printing from the point of failure. Developed an intuitive command-line interface allowing users to interact seamlessly with the script, providing clear instructions and feedback throughout the editing process.",
