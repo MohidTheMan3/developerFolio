@@ -1,0 +1,242 @@
+@import "../../_globalColor";
+
+// Add these missing variables to your _globalColor.scss file:
+// $highlightColor: #45ce43;  // or use your $buttonHover color
+// $darkBorder1: rgba(255, 255, 255, 0.1);
+// $darkText: #ffffff;
+
+// Using your existing colors with fallbacks for missing ones
+$highlightColor: $buttonHover !default;
+$darkBorder1: rgba(255, 255, 255, 0.1) !default;
+$darkText: $textColorDark !default;
+$dark: $darkBackground !default;
+
+#timeline {
+  padding: 80px 0;
+  background: $lightBackground1;
+  overflow: hidden;
+}
+
+.dark-mode #timeline {
+  background: $dark;
+}
+
+.timeline-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.timeline-heading {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: $titleColor;
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, $buttonColor 0%, $buttonHover 100%);
+    border-radius: 2px;
+  }
+}
+
+.dark-mode .timeline-heading {
+  color: $darkText;
+}
+
+/* ensure headings and line colors respond to timeline-list.dark too */
+.timeline-list.dark + .timeline-heading,
+.timeline-list.dark .timeline-heading,
+.timeline-list.dark ~ .timeline-heading {
+  color: $darkText;
+}
+
+.timeline-list.dark::before {
+  background: $darkBorder1;
+}
+
+.timeline-list.dark::after {
+  border-color: $darkBackground;
+  background: $highlightColor;
+}
+
+.timeline-list {
+  position: relative;
+  padding: 40px 0;
+  margin: 0 auto;
+  max-width: 100%;
+  
+  /* Center line */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    background: $lightBorder1;
+    z-index: 1;
+  }
+  
+  &.dark::before {
+    background: $darkBorder1;
+  }
+  
+  /* Top dot */
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: $highlightColor;
+    border-radius: 50%;
+    border: 3px solid $lightBackground1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+}
+
+/* Bottom dot */
+.timeline-list::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: $highlightColor;
+  border-radius: 50%;
+  border: 3px solid $lightBackground1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.dark-mode .timeline-list::after,
+.dark-mode .timeline-list::after {
+  border-color: $dark;
+}
+
+/* Year markers */
+.timeline-year-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $buttonColor;
+  color: white;
+  padding: 4px 14px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $buttonColor);
+  }
+  
+  &::before {
+    right: 100%;
+    background: linear-gradient(90deg, transparent, $buttonColor);
+  }
+  
+  &::after {
+    left: 100%;
+    background: linear-gradient(90deg, $buttonColor, transparent);
+  }
+}
+
+.dark-mode .timeline-year-marker {
+  background: $highlightColor;
+  
+  &::before {
+    background: linear-gradient(90deg, transparent, $highlightColor);
+  }
+  
+  &::after {
+    background: linear-gradient(90deg, $highlightColor, transparent);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #timeline {
+    padding: 60px 0;
+  }
+  
+  .timeline-container {
+    width: 95%;
+    padding: 0 10px;
+  }
+  
+  .timeline-heading {
+    font-size: 36px;
+    margin-bottom: 2rem;
+    
+    &::after {
+      width: 40px;
+      height: 3px;
+    }
+  }
+  
+  .timeline-list {
+    padding: 30px 0;
+    height: auto !important;
+    
+    &::before {
+      left: 8px;
+      transform: none;
+      width: 3px;
+    }
+    
+    &::after {
+      left: 8px;
+      transform: none;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  
+  .timeline-year-marker {
+    left: 8px !important;
+    transform: none !important;
+    font-size: 12px;
+    padding: 3px 10px;
+    
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-heading {
+    font-size: 28px;
+  }
+  
+  .timeline-container {
+    padding: 0 5px;
+  }
+}

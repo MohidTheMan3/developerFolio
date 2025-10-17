@@ -76,7 +76,18 @@ $appHeaderBG: #282c34;
 // misc colors
 $skillsColor: #5bebeb;
 $appLink: #09d3ac;
+// Add these to your _globalColor.scss file to complete the timeline styling:
 
+// Accent/Highlight color (using your green theme)
+$highlightColor: #45ce43;  // Same as $buttonHover, or choose your preferred accent
+
+// Dark mode specific colors
+$darkBorder1: rgba(255, 255, 255, 0.1);  // Subtle border for dark mode cards
+$darkText: #ffffff;  // Main text in dark mode (you already have $textColorDark which is the same)
+$darkSubText: #b5b5b5;  // Subtitle/secondary text in dark mode
+
+// Optional: if you want to use a different dark background
+$dark: #171c28;  // You already have $darkBackground, so this is optional
 // social media icons
 $faceBook: #3b5998;
 $linkedin: #0e76a8;

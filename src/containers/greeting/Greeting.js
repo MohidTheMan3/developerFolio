@@ -53,18 +53,9 @@ export default function Greeting() {
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
-                
-                {greeting.resumeLink /*&& isMobileDevice*/ && (
-                  <a
-                    //text="View Resume"
-                    href= {greeting.resumeLink} 
-                    target="_blank"
-                    newTab={true}
-                    rel="noreferrer"
-                    className="download-link-button"
-                  >
-                    <Button text = "View Resume" />
-                  </a>
+
+                {greeting.resumeLink && (
+                  <Button text="View Resume" href={greeting.resumeLink} newTab={true} className="download-link-button" />
                 )}
               </div>
             </div>

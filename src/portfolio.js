@@ -131,10 +131,10 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Carnegie Mellon University",
-      logo: require("./assets/images/CMULogo.jpg"),
-      subHeader: "Bachelors of Science in Electrical and Computer Engineering",
-      duration: "August 2023 - May 2026",
-      desc: "Completed Coursework: Computer Systems, Electronic Devices & Analog Circuits, Structure & Design of Digital Systems, Principles of Imperative Computation, Rapid Prototyping Technologies",
+      logo: require("./assets/images/CMURed.png"),
+      subHeader: "Bachelors and Masters of Science in Electrical and Computer Engineering",
+      duration: "August 2023 - May 2027",
+      desc: "Completed Coursework: Logic Design & Verification, Embedded Systems, HackerFab, Computer Systems, Electronic Devices & Analog Circuits, Rapid Prototyping",
       //descBullets: [
       //  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       //  "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -170,14 +170,50 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Electrical and Computer Engineering Teaching Assistant",
-      company: "Carnegie Mellon University",
-      companylogo: require("./assets/images/CMULogo.jpg"),
-      date: "January 2025 – Present",
+      role: "Hardware & Software Researcher, DIY Atomic Layer Deposition (ALD) System",
+      company: "HackerFab – Carnegie Mellon University",
+      companylogo: require("./assets/images/hackerfab.png"),
+      date: "August 2025 – Present",
       location: "Pittsburgh, PA",
       descBullets: [
-        "Guided students in implementing machine learning models for image detection & recognition of symbols, & deploying them on microcontrollers for real-world applications",
-        "Taught I2C communication protocols, sensor integration, & Arduino programming, enabling students to interface microcontrollers with external devices such as sensors & displays",
+        "Engineering a custom ALD platform with MOSFET-based pulse and heating control, achieving sub-millisecond precursor timing and ±2°C stability for thin-film deposition",
+        "Implementing PID feedback and a Flutter interface for recipe management, remote monitoring, and reliable operation during 8+ hour deposition runs",
+        "Validated greater than 95% uptime and less than 5% variation in film thickness across repeated processes, improving reproducibility for ALD/CVD workflows in semiconductor research",
+        "Contributing through HackerFab, CMU's open-source hardware innovation lab, advancing accessible semiconductor process tools for research and prototyping"
+      ]
+    },
+    {
+      role: "Software Engineering Intern",
+      company: "North Atlantic Industries",
+      companylogo: require("./assets/images/nai.png"), // You'll need to add this logo
+      date: "May 2025 – August 2025",
+      location: "Bohemia, NY",
+      descBullets: [
+        "Leading the development of a cross-platform diagnostic UI bridging low-level firmware with Flutter/Python-based interfaces, improving engineering test efficiency",
+        "Engineered multi-threaded C firmware and designed robust inter-process communication protocols to ensure deterministic real-time coordination across safety-critical avionics modules with a 60% file size reduction",
+        "Won company hackathon by developing an AI-powered online parts watchdog system that detects component changes and posts alerts ranked by AI-determined severity levels"
+      ]
+    },
+    {
+      role: "Teaching Assistant, Computer Systems (18-213)",
+      company: "Carnegie Mellon University",
+      companylogo: require("./assets/images/CMUECE.png"),
+      date: "May 2025 – August 2025",
+      location: "Pittsburgh, PA",
+      descBullets: [
+        "Conducted office hours & recitations for 100+ students, translating complex system-level concepts such as multithreading, cache behavior, & memory hierarchy into digestible formats",
+        "Mentored students one-on-one in debugging & understanding multi-threaded C programs, system-level performance issues, & x86-64 assembly in a Unix environment",
+        "Oversaw grading & walkthroughs of intensive labs covering memory allocators, shell implementation, & multithreaded network proxy development"
+      ]
+    },
+    {
+      role: "Teaching Assistant, Intro to ECE (18-100)",
+      company: "Carnegie Mellon University",
+      companylogo: require("./assets/images/CMUECE.png"),
+      date: "January 2025 – May 2025",
+      location: "Pittsburgh, PA",
+      descBullets: [
+        "Led small groups of five students each, providing direct guidance & mentorship to ensure their success in the course",
         "Facilitated the Analog-to-Digital Converter Lab, helping students design, simulate, & build circuits to understand practical applications in embedded systems"
       ]
     },
@@ -236,7 +272,11 @@ const bigProjects = {
   projects: [
     {
       projectName: "Autonomous Plastic Waste Collector | Python, OpenCV, C++, Solidworks, Machine Learning",
-      projectDesc: "Developed a robot with 95% accuracy in detecting plastic water bottles using Python, OpenCV, & a custom-trained machine learning model on a curated dataset. Implemented seamless communication between a Raspberry Pi for real-time vision processing & an Arduino for motor control, achieving reliable multi-device coordination. Designed & fabricated custom 3D-printed mounts & a laser-cut base plate, integrating a camera, DC motors, & battery-powered functionality for autonomous mobility.",
+      projectDesc: [
+        "Led a multidisciplinary team of 5 to develop an autonomous robot with 95% plastic detection accuracy, collecting 20+ bottles per test cycle in live demos",
+        "Directed mechanical design & fabrication workflows, including 3D-printed camera, sensor mounts, & a laser-cut chassis to meet power & mobility requirements",
+        "Planned & executed a detailed project timeline with weekly team meetings, milestones, & task ownership to ensure timely hardware/software integration"
+      ],
       image: require("./assets/images/robot.png"),
       date: "January 2025"
     },
@@ -248,7 +288,11 @@ const bigProjects = {
     },
     {
       projectName: "Custom Mechanical Keyboard | Fusion 360, Visual Studio, C++, 3D Printing, Soldering",
-      projectDesc: "Designed & assembled a personalized mechanical keyboard using Teensy micro-controller & soldering. Employed 3D printing for casing, enhancing both functionality & customizability. Designed & programmed a customized firmware for a mechanical keyboard, utilizing C++.",
+      projectDesc: [
+        "Assembled a personalized mechanical keyboard using a Teensy micro-controller & soldering",
+        "Leveraged 3D printing for casing, enhancing both functionality & customizability while reducing costs by 50%",
+        "Modeled & programmed a customized firmware for the keyboard in C++"
+      ],
       image: require("./assets/images/TEENSY.png"),
       date: "December 2023"
     }
