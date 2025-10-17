@@ -148,7 +148,6 @@ export default function Timeline() {
 
   const totalDuration = paddedMaxDate - paddedMinDate;
 
-  // Calculate positions for each item (inverted for reverse chronological)
   let positionedItems = combined.map(item => {
     // Clamp start date to timeline minimum
     const clampedStartDate =
@@ -157,8 +156,15 @@ export default function Timeline() {
     const startOffset = clampedStartDate - paddedMinDate;
     const endOffset = item.endDate - paddedMinDate;
 
-    // Invert the positions so newest items are at top
-    const topPercent = Math.max(0, 100 - (endOffset / totalDuration) * 100);
+    let topPercent;
+    if (/present|current|now/i.test(item.date)) {
+      // Force present experience to top
+      topPercent = 0;
+    } else {
+      // Invert the positions so newest items are at top
+      topPercent = Math.max(0, 100 - (endOffset / totalDuration) * 100);
+    }
+
     const bottomPercent = Math.min(
       100,
       100 - (startOffset / totalDuration) * 100
@@ -177,14 +183,14 @@ export default function Timeline() {
   const rightItems = [];
 
   positionedItems.forEach((item, index) => {
-    // Simple alternating pattern - start with right for newest item
-    const preferLeft = index % 2 === 1;
+    // Simple alternating pattern
+    const preferLeft = index % 2 === 0;
 
-    // Check for overlaps on preferred side with larger gap for better spacing
+    // Check for overlaps on preferred side
     const checkOverlap = existingItem => {
       const itemEnd = item.topPercent + item.heightPercent;
       const existingEnd = existingItem.topPercent + existingItem.heightPercent;
-      const minGap = 8; // Increased from 5 to 8 for more breathing room
+      const minGap = 5;
 
       return (
         item.topPercent < existingEnd + minGap &&
