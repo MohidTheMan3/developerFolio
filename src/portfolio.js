@@ -25,7 +25,8 @@ const greeting = {
   subTitle: emoji(
     "Electrical and Computer Engineering sophomore at Carnegie Mellon University with a knack for C, Java, and Python. Passionate about software development, from robotics to building everyday applications."
   ),
-  resumeLink: "https://drive.google.com/file/d/1JUoJz8ByTBn4XYYx5Zb36eAkC5z_R_TT/view?usp=sharing", // Set to empty to hide the button
+  resumeLink:
+    "https://drive.google.com/file/d/1JUoJz8ByTBn4XYYx5Zb36eAkC5z_R_TT/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -48,22 +49,18 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "SOPHOMORE COLLEGE STUDENT PURSUING ELECTRICAL AND COMPUTER ENGINEERING",
+  subTitle:
+    "SOPHOMORE COLLEGE STUDENT PURSUING ELECTRICAL AND COMPUTER ENGINEERING",
   skills: [
-    emoji(
-      "⚡ Develop interactive Python Scripts to solve everyday problems"
-    ),
+    emoji("⚡ Develop interactive Python Scripts to solve everyday problems"),
     emoji("⚡ Create custom electronics for everyday use"),
-    emoji(
-      "⚡ Display interactive design for Web Applications"
-    )
+    emoji("⚡ Display interactive design for Web Applications")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
-    
     {
       skillName: "Java",
       fontAwesomeClassname: "fab fa-java"
@@ -132,9 +129,10 @@ const educationInfo = {
     {
       schoolName: "Carnegie Mellon University",
       logo: require("./assets/images/CMURed.png"),
-      subHeader: "Bachelors and Masters of Science in Electrical and Computer Engineering",
+      subHeader:
+        "Bachelors and Masters of Science in Electrical and Computer Engineering",
       duration: "August 2023 - May 2027",
-      desc: "Completed Coursework: Logic Design & Verification, Embedded Systems, HackerFab, Computer Systems, Electronic Devices & Analog Circuits, Rapid Prototyping",
+      desc: "Completed Coursework: Logic Design & Verification, Embedded Systems, HackerFab, Computer Systems, Electronic Devices & Analog Circuits, Rapid Prototyping"
       //descBullets: [
       //  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       //  "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -236,8 +234,8 @@ const workExperiences = {
       companylogo: require("./assets/images/unqork.png"),
       location: "New York, NY",
       descBullets: [
-        "Collaborated with the engineering team to gain insights into web development processes & best practices.", 
-        "Engaged in Quality Assurance (QA) testing of the No-Code Software, with a focus on web applications & websites.", 
+        "Collaborated with the engineering team to gain insights into web development processes & best practices.",
+        "Engaged in Quality Assurance (QA) testing of the No-Code Software, with a focus on web applications & websites.",
         "Successfully completed the Unqork Novice Developer certification, demonstrating expertise in web development."
       ]
     },
@@ -245,11 +243,11 @@ const workExperiences = {
       role: "Computer Science Instructor",
       company: "Coding Minds Academy",
       date: "June 2022 – April 2023",
-      companylogo:require("./assets/images/codingminds.jpg"),
+      companylogo: require("./assets/images/codingminds.jpg"),
       location: "Irvine, CA",
-      descBullets:[
+      descBullets: [
         "Conducted one-on-one teaching sessions to students nationwide, specializing in languages such as Python & Java for competition in USACO.",
-        "Constantly update knowledge & skills in both teaching techniques (Replit & Leetcode) & programming languages to deliver high-quality education to students.", 
+        "Constantly update knowledge & skills in both teaching techniques (Replit & Leetcode) & programming languages to deliver high-quality education to students.",
         "Demonstrated a strong ability to adapt teaching style to suit individual student needs through one-on-one sessions, resulting in improved student comprehension & performance."
       ]
     }
@@ -271,7 +269,8 @@ const bigProjects = {
   subtitle: "Some fun projects I did while pursuing my hobbies!",
   projects: [
     {
-      projectName: "Autonomous Plastic Waste Collector | Python, OpenCV, C++, Solidworks, Machine Learning",
+      projectName:
+        "Autonomous Plastic Waste Collector | Python, OpenCV, C++, Solidworks, Machine Learning",
       projectDesc: [
         "Led a multidisciplinary team of 5 to develop an autonomous robot with 95% plastic detection accuracy, collecting 20+ bottles per test cycle in live demos",
         "Directed mechanical design & fabrication workflows, including 3D-printed camera, sensor mounts, & a laser-cut chassis to meet power & mobility requirements",
@@ -282,12 +281,14 @@ const bigProjects = {
     },
     {
       projectName: "Resume Failed 3D Print Script | Python",
-      projectDesc: "Implemented functionality to parse 3D Printer G-code files & enabled users to input essential parameters. Designed algorithms to analyze the G-code file & other inputs to precisely continue printing from the point of failure. Developed an intuitive command-line interface allowing users to interact seamlessly with the script, providing clear instructions and feedback throughout the editing process.",
+      projectDesc:
+        "Implemented functionality to parse 3D Printer G-code files & enabled users to input essential parameters. Designed algorithms to analyze the G-code file & other inputs to precisely continue printing from the point of failure. Developed an intuitive command-line interface allowing users to interact seamlessly with the script, providing clear instructions and feedback throughout the editing process.",
       image: require("./assets/images/Python-logo-notext.svg.png"),
       date: "June 2024"
     },
     {
-      projectName: "Custom Mechanical Keyboard | Fusion 360, Visual Studio, C++, 3D Printing, Soldering",
+      projectName:
+        "Custom Mechanical Keyboard | Fusion 360, Visual Studio, C++, 3D Printing, Soldering",
       projectDesc: [
         "Assembled a personalized mechanical keyboard using a Teensy micro-controller & soldering",
         "Leveraged 3D printing for casing, enhancing both functionality & customizability while reducing costs by 50%",
@@ -361,11 +362,13 @@ const bigProjects = {
 // };
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆"),
-  subtitle: "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done!",
+  subtitle:
+    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done!",
   achievementsCards: [
     {
       title: "5G Technologies Certification from Qualcomm",
-      subtitle: "Certified in an overview of 5G, how it works, and how it is transforming the way the world operates.",
+      subtitle:
+        "Certified in an overview of 5G, how it works, and how it is transforming the way the world operates.",
       image: require("./assets/images/Qualcomm5g.jpg"),
       imageAlt: "Certificate",
       footerLink: [
@@ -377,7 +380,8 @@ const achievementSection = {
     },
     {
       title: "Unqork Novice Configurator",
-      subtitle: "Demonstrated proficient knowledge of basic Unqork building blocks, workflows, data structures, and APIs.",
+      subtitle:
+        "Demonstrated proficient knowledge of basic Unqork building blocks, workflows, data structures, and APIs.",
       image: require("./assets/images/Novice-Configurator.png"),
       imageAlt: "Unqork Logo",
       footerLink: [

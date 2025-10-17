@@ -35,7 +35,7 @@ $dark: $darkBackground !default;
   margin-bottom: 3rem;
   color: $titleColor;
   position: relative;
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -74,7 +74,7 @@ $dark: $darkBackground !default;
   padding: 40px 0;
   margin: 0 auto;
   max-width: 100%;
-  
+
   /* Center line */
   &::before {
     content: "";
@@ -87,11 +87,11 @@ $dark: $darkBackground !default;
     background: $lightBorder1;
     z-index: 1;
   }
-  
+
   &.dark::before {
     background: $darkBorder1;
   }
-  
+
   /* Top dot */
   &::after {
     content: "";
@@ -144,7 +144,7 @@ $dark: $darkBackground !default;
   z-index: 50;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
-  
+
   &::before,
   &::after {
     content: "";
@@ -155,12 +155,12 @@ $dark: $darkBackground !default;
     height: 2px;
     background: linear-gradient(90deg, transparent, $buttonColor);
   }
-  
+
   &::before {
     right: 100%;
     background: linear-gradient(90deg, transparent, $buttonColor);
   }
-  
+
   &::after {
     left: 100%;
     background: linear-gradient(90deg, $buttonColor, transparent);
@@ -169,11 +169,11 @@ $dark: $darkBackground !default;
 
 .dark-mode .timeline-year-marker {
   background: $highlightColor;
-  
+
   &::before {
     background: linear-gradient(90deg, transparent, $highlightColor);
   }
-  
+
   &::after {
     background: linear-gradient(90deg, $highlightColor, transparent);
   }
@@ -184,32 +184,32 @@ $dark: $darkBackground !default;
   #timeline {
     padding: 60px 0;
   }
-  
+
   .timeline-container {
     width: 95%;
     padding: 0 10px;
   }
-  
+
   .timeline-heading {
     font-size: 36px;
     margin-bottom: 2rem;
-    
+
     &::after {
       width: 40px;
       height: 3px;
     }
   }
-  
+
   .timeline-list {
     padding: 30px 0;
     height: auto !important;
-    
+
     &::before {
       left: 8px;
       transform: none;
       width: 3px;
     }
-    
+
     &::after {
       left: 8px;
       transform: none;
@@ -217,13 +217,13 @@ $dark: $darkBackground !default;
       height: 10px;
     }
   }
-  
+
   .timeline-year-marker {
     left: 8px !important;
     transform: none !important;
     font-size: 12px;
     padding: 3px 10px;
-    
+
     &::before,
     &::after {
       display: none;
@@ -235,7 +235,7 @@ $dark: $darkBackground !default;
   .timeline-heading {
     font-size: 28px;
   }
-  
+
   .timeline-container {
     padding: 0 5px;
   }

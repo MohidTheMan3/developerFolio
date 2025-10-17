@@ -22,8 +22,6 @@ export default function Greeting() {
   //   setIsMobileDevice(isMobile());
   // }, []);
 
-  
-
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -55,7 +53,12 @@ export default function Greeting() {
                 <Button text="Contact me" href="#contact" />
 
                 {greeting.resumeLink && (
-                  <Button text="View Resume" href={greeting.resumeLink} newTab={true} className="download-link-button" />
+                  <Button
+                    text="View Resume"
+                    href={greeting.resumeLink}
+                    newTab={true}
+                    className="download-link-button"
+                  />
                 )}
               </div>
             </div>
